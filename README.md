@@ -26,7 +26,7 @@ g++ -W file_name.cpp -o another_name
 3. `ascii`
 
    A: 65; a: 97
-   
+
 4. 结构体的初始化
 
    ```c++
@@ -45,3 +45,132 @@ g++ -W file_name.cpp -o another_name
    ```
 
    // `scanf()`使用`%c`可以读入`空格`，要注意格式！
+
+   
+
+### c++
+
+#### 1. vector
+
+> 使用：`#include<vector>`；除此之外，还需加上`using namespace std;`
+
+##### （1）定义
+
+```c++
+vector<typename> name;
+```
+
+*注：其长度可以根据需要进行变化，“变长数组”*
+
+##### （2）vector容器内元素的访问
+
+eg. 
+
+```c++
+vector<typename> vi;
+```
+
+
+
+- 通过`下标`访问
+
+  ```c++
+  vi[index];  // 下标从为0~vi.size()-1
+  ```
+
+- 通过`迭代器`访问
+
+  迭代器(iterator)定义：`vector<typename>::iterator it;`
+
+  // it 是一个 vector<typename>::iterator 型的变量
+
+  // 这样得到了迭代器it，访问vector里的内容方式如下：
+
+  ```c++
+  *it
+  ```
+
+  ```c++
+  // 测试vector
+  #include <cstdio>
+  #include <vector>
+  using namespace std;
+  int main(){
+      vector<int> vi;
+      for(int i = 1; i <= 5; i++){
+          vi.push_back(i);
+      }
+      vector<int>::iterator it = vi.begin(); // vi.begin()取vi首元素地址
+      for(int i = 0; i < 5; i++){
+          printf("%d\n", *(it+i));
+      }
+      return 0;
+  }
+  ```
+
+  ```c++
+  // vector_test_2
+  #include <cstdio>
+  #include <vector>
+  using namespace std;
+  int main(){
+      vector<int> vi;
+      for(int i = 1; i <= 5; i++){
+          vi.push_back(i);
+      }
+      for(vector<int>::iterator it = vi.begin(); it != vi.end(); it++){
+          printf("%d ", *it);
+      }
+      return 0;
+  }
+  ```
+
+##### （3）vector常用函数
+
+- `push_back()`
+
+  push_back(x): 在vector后添加元素x，时间复杂度`O(1)`
+
+  ```c++
+  // vector_test_3
+  // push_back()
+  #include <cstdio>
+  #include <vector>
+  using namespace std;
+  int main(){
+      vector<int> vi;
+      for(int i = 1; i <=3; i++){
+          vi.push_back(i);
+      }
+      for(int i = 0; i < 3; i++){
+          printf("%d ", vi[i]);
+      }
+      return 0;
+  }
+  ```
+
+- `pop_back()`
+
+  pop_back(): 删除vector尾元素，时间复杂度`O(1)`
+
+  ```c++
+  // vector_test_4
+  // pop_back()
+  #include <cstdio>
+  #include <vector>
+  using namespace std;
+  int main(){
+      vector<int> vi;
+      for(int i = 1; i <= 5; i++){
+          vi.push_back(i);
+      }
+      vi.pop_back();
+      for(int i = 0; i < vi.size(); i++){
+          printf("%d ", vi[i]);
+      }
+      return 0;
+  }
+  // result: 1 2 3 4
+  ```
+
+  
