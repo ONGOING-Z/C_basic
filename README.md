@@ -173,4 +173,70 @@ vector<typename> vi;
   // result: 1 2 3 4
   ```
 
+- size()
+
+  用来获得vector中元素个数，时间复杂度`O(1)`
+
+- clear()
+
+  用来清空vector中的所有元素，时间复杂度`O(n)`
+
+- insert()
+
+  `insert(it, x)`: 向vector迭代器it处插入元素x，时间复杂度`O(N)`
+
+  ```c++
+  // vector_test_7
+  // insert(it, x)
+  #include <cstdio>
+  #include <vector>
+  using namespace std;
+  int main(){
+      vector<int> vi;
+      for(int i = 1; i <= 3; i++){
+          vi.push_back(i);
+      }
+      vi.insert(vi.begin()+2, -1);
+      for(int i = 0; i < vi.size(); i++){
+          printf("%d ", vi[i]);
+      }
+      return 0;
+  }
+  // result: 1 2 -1 3
+  ```
+
+- erase()
+
+  时间复杂度均为`O(N)`
+
+  - 删除单个元素 erase(it)
+
+    ```c++
+    // vector_test_8
+    // erase()
+    #include <cstdio>
+    #include <vector>
+    using namespace std;
+    int main(){
+        vector<int> vi;
+        for(int i = 1; i <= 5; i++){
+            vi.push_back(i);
+        }
+        vi.erase(vi.begin()+3);
+        for(int i = 0; i < vi.size(); i++){
+            printf("%d\n", vi[i]);
+        }
+        return 0;
+    }
+    // result: 1 2 3 5
+    ```
+
+    
+
+  - 删除区间所有元素 erase(first, last) **左开右闭**
+
+    
+
+    
+
   
