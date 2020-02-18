@@ -1,4 +1,9 @@
+[toc]
+
+
+
 ### 1. linux下编译运行c++程序
+
 ```
 g++ -W file_name.cpp -o another_name
 ./file_name
@@ -237,6 +242,60 @@ vector<typename> vi;
 
     
 
-    
+  
+
+  
+
+  
+
+  
+
+#### 2. stack
+
+##### （1）定义
+
+添加`#include <stack>`与`using namespace std`
+
+定义写法：
+
+```c++
+stack<typename> name;
+```
+
+
+
+##### （2）stack容器内元素访问
+
+后进先出，只能通过`top()`访问栈顶元素。
+
+##### （3）常用函数
+
+- push()
+
+  push(x): 将x入栈，时间复杂度`O(1)`
+
+- top()
+
+  top(): 获得栈顶元素，时间复杂度`O(1)`
+
+- pop()
+
+  pop(): 弹出栈顶元素，时间复杂度`O(1)`
+
+- empty()
+
+  检测stack是否为空。返回`true`为空。时间复杂度`O(1)`
+
+- size()
+
+  返回stack内元素个数。时间复杂度`O(1)`
+
+  
+
+  
+
+
+
+  
 
   
