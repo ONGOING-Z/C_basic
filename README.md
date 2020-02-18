@@ -290,7 +290,47 @@ stack<typename> name;
 
   返回stack内元素个数。时间复杂度`O(1)`
 
+#### 3. string
+
+##### （1）定义
+
+添加`#include <string>`与`using namespace std`
+
+`string str;`
+
+初始化：`string str = "abcd";`
+
+##### （2）string中内容访问
+
+- 通过下标访问
+
+  `str[i]`
+
+- 通过迭代器访问
+
+  定义：`string::iterator it;`
+
+  通过`*it`访问string中的每一位。
+
+  ```c++
+  // string_test_3
+  #include <cstdio>
+  #include <string>
+  using namespace std;
+  int main(){
+      string str = "abcd";
+      for(string::iterator it = str.begin(); it != str.end(); it++){
+          printf("%c", *it);
+      } 
+      return 0;
+  }
+  ```
+
   
+
+##### （3）常用函数
+
+
 
   
 
