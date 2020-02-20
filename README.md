@@ -254,7 +254,7 @@ vector<typename> vi;
 
 ##### （1）定义
 
-添加`#include <stack>`与`using namespace std`
+添加`#include <stack>`与`using namespace std;`
 
 定义写法：
 
@@ -332,7 +332,111 @@ stack<typename> name;
 
 
 
-  
+#### algorithm头文件下常用函数
+
+> 须添加`using namespace std;`
+
+##### （1）max()/min()/abs()
+
+- max(x, y): 返回x, y中最大值
+
+- min(x, y): 返回x, y中最小值
+
+  **参数必须是两个， 可以是浮点数**
+
+- max(x, max(y, z)): 返回三者中最大值
+
+- abx(x): 返回x绝对值  // **x必须是整数**
+
+- fabs(x): **浮点数绝对值，使用`math`头文件**
+
+##### （2）swap()
+
+- swap(x, y): 交换x和y的值
+
+##### （3）reverse()
+
+- reverse(it, it2): 将数组指针在[it, it2)之间的元素或容器的迭代器在[it, it2)范围内的元素进行反转。
+
+  ```c++
+  // algorithm_test_3
+  #include <cstdio>
+  #include <algorithm>
+  using namespace std;
+  int main(){
+      int a[10] = {10, 11, 12, 13, 14, 15};
+      reverse(a, a+4);
+      for(int i = 0; i < 6; i++){
+          printf("%d ", a[i]);
+      }
+      return 0;
+  }
+  result: 13 12 11 10 14 15
+  ```
+
+##### （4）sort()
+
+- 如何使用sort排序
+
+  - 使用
+
+    ```c++
+    #include <algorithm>
+    using namespace std;
+    ```
+
+    `sort(首元素地址(必填), 尾元素地址(必填), 比较函数(非必填))`
+
+    注：不写比较函数，默认递增排序
+
+    ```c++
+    // algorithm_test_4
+    #include <cstdio>
+    #include <algorithm>
+    using namespace std;
+    int main(){
+        int a[6] = {9, 4, 2, 5, 6, -1};
+        sort(a, a+4); // [0, 4)
+        for(int i = 0; i < 6; i++)
+            printf("%d ", a[i]);
+        printf("\n");
+        sort(a, a+6); // [0, 6)
+        for(int i = 0; i < 6; i++)
+            printf("%d ", a[i]);
+        return 0;
+    }
+    result:
+    ```
+
+    ![img_1](images/img_1.png)
+
+-  如何实现比较函数cmp
+
+  - 基本数据类型数组的排序
+
+    ```c++
+    // 实现从大到小排序
+    // algorithm_test_5
+    #include <cstdio>
+    #include <algorithm>
+    using namespace std;
+    
+    bool cmp(int a, int b){
+        return a > b;  // 当a>b时，a放在b前边
+    }
+    int main(){
+        int a[] = {1, 2, 3, 4};
+        sort(a, a+4, cmp);
+        for(int i = 0; i < 4; i++){
+            printf("%d ", a[i]);
+        }
+        return 0;
+    }
+    result:
+    4 3 2 1
+    ```
+
+    
 
 
 
