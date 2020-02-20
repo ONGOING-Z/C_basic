@@ -1,8 +1,8 @@
 [toc]
 
+### 一、一些细节
 
-
-### 1. linux下编译运行c++程序
+1. linux下编译运行c++程序
 
 ```
 g++ -W file_name.cpp -o another_name
@@ -36,15 +36,16 @@ g++ -W file_name.cpp -o another_name
 
    ```c++
    scanf("%d %c %d", &a, &data, &b);
-   node[a] = {data, b, false};
+   node[a] = {data, b, false};  // 注意时花括号，和数组初始化一样。
    ```
 
 5. ```c++
-   printf("%05d", i);
-   ```
+   printf("%05d", i);  // 使不足５位的整数的高位补０。
+   printf("%5d", i);  // 使不足５位的整数的高位补为空。
+```
+   
 
-   使不足５位的整数的高位补０。
-
+   
 6. ```c++
    scanf("%d %c");
    ```
@@ -53,7 +54,7 @@ g++ -W file_name.cpp -o another_name
 
    
 
-### c++
+### 二、c++
 
 #### 1. vector
 
@@ -332,7 +333,7 @@ stack<typename> name;
 
 
 
-#### algorithm头文件下常用函数
+#### 4. algorithm头文件下常用函数
 
 > 须添加`using namespace std;`
 
@@ -436,7 +437,58 @@ stack<typename> name;
     4 3 2 1
     ```
 
+  - 结构体数组的排序
+
+    定义如下结构体：
+
+    ```c++
+    struct node{
+        int x, y;
+    }ssd[10];
+    ```
+
+    **将ssd数组按x从大到小排序**：
+
+    ```c++
+    bool cmp(node a, node b){
+        return a.x > b.x;
+    }
+    ```
+
+    eg.
+
+    ```c++
+    // algorithm_test_6
+    // 结构体数组的排序
+    #include <cstdio>
+    #include <algorithm>
+    using namespace std;
     
+    struct node{
+        int x, y;
+    }ssd[10];
+    bool cmp(node a, node b){
+        return a.x > b.x;
+    }
+    
+    int main(){
+        ssd[0].x = 2;
+        ssd[0].y = 2;
+        ssd[1].x = 1;
+        ssd[1].y = 3;
+        ssd[2].x = 3;
+        ssd[2].y = 1;
+        sort(ssd, ssd+3, cmp);
+        for(int i = 0; i < 3; i++){
+            printf("%d %d\n", ssd[i].x, ssd[i].y);
+        }
+        return 0;
+    }
+    ```
+
+    result:
+
+    ![img_2](images/img_2.png)
 
 
 
