@@ -345,9 +345,75 @@ stack<typename> name;
 
 ##### （3）常用函数
 
+#### 4. queue
 
+##### （1）定义
 
-#### 4. algorithm头文件下常用函数
+预先条件：
+
+```c++
+#include <queue>
+using namespace std;
+```
+
+`queue<typename> name;`
+
+##### （2）容器内元素访问
+
+通过`front()`访问队首元素，通过`back()`访问队尾元素。
+
+```c++
+// queue_test_1
+#include <cstdio>
+#include <queue>
+using namespace std;
+int main(){
+    queue<int> q;
+    for(int i = 0; i < 5; i++) {
+        q.push(i);
+    }
+    printf("%d %d\n", q.front(), q.back());
+    return 0;
+}
+result:
+0 4
+```
+
+##### （3）常用函数
+
+- push()
+
+  `push(x)`：将x入队。
+
+  时间复杂度：`O(1)`
+
+- front()/back()
+
+  时间复杂度：`O(1)`
+
+- pop()
+
+  pop()：出队
+
+  时间复杂度：`O(1)`
+
+- empty()
+
+  检测q是否为空，为空返回true.
+
+  时间复杂度：`O(1)`
+
+- size()
+
+  返回元素个数。
+
+  时间复杂度：`O(1)`
+
+##### （4）用途
+
+- 广度优先搜索
+
+#### 5. algorithm头文件下常用函数
 
 > 须添加`using namespace std;`
 
