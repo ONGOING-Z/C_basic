@@ -42,15 +42,29 @@ g++ -W file_name.cpp -o another_name
 5. ```c++
    printf("%05d", i);  // 使不足５位的整数的高位补０。
    printf("%5d", i);  // 使不足５位的整数的高位补为空。
-```
-   
-
+   ```
    
 6. ```c++
    scanf("%d %c");
    ```
+   
+      // `scanf()`使用`%c`可以读入`空格`，要注意格式！
 
-   // `scanf()`使用`%c`可以读入`空格`，要注意格式！
+7. 使用new运算符为链表结点分配内存空间
+
+   使用方法：`typename *p = new typename;`
+
+   eg.
+
+   ```c++
+   int *p = new int;
+   node *p = new node;
+   int *p = new arr[10000];
+   ```
+
+   
+
+   
 
    
 
