@@ -572,6 +572,61 @@ result:
 
 
 
-  
+#### 6. map
+
+> 翻译为映射。
+>
+> 例如在定义数组时，是定义了一个从`int`到`int`的映射，如`arr[0] = 5`是将0映射到5.
+>
+> map可以将任何基本类型映射到任何基本类型。
+
+##### （1）定义
+
+- 前提条件
+
+  ```c++
+  #include <map>
+  using namespace std;
+  ```
+
+- map定义
+
+  ```c++
+  map<typename1, typename2> mp;
+  ```
+
+  注：如果是字符串到整型的映射，必须使用`string`而不能用`char数组`
+
+  ```c++
+  map<string, int> mp;
+  ```
+
+##### （2）容器内元素访问
+
+- 通过下标访问
+
+  ```c++
+  // map_test_1
+  #include <cstdio>
+  #include <map>
+  using namespace std;
+  int main() {
+      map<char, int> mp;
+      mp['c'] = 20;
+      mp['c'] = 30;
+      printf("%d\n", mp['c']);
+      return 0;
+  }
+  ```
+
+- 通过迭代器访问(跳过)
+
+##### （3）常用函数
+
+- find()
+- size()
+- clear()
+
+
 
   
