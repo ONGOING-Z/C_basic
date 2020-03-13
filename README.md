@@ -61,8 +61,14 @@ g++ -W file_name.cpp -o another_name
    node *p = new node;
    int *p = new arr[10000];
    ```
-
    
+8. `memset`对数组中每一个元素赋相同的值
+
+   格式：`memset(name, value, sizeof(name))`
+
+   前提条件：添加`string.h`
+
+   ==建议赋值为0或-1==，不易出错。
 
    
 
