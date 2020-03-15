@@ -576,6 +576,26 @@ result:
 
     ![img_2](images/img_2.png)
 
+##### (5) fill
+
+- 将数组或容器中某一段区间赋为某个相同的值。==赋值可以是数组类型对应的任何值==
+
+```c++
+#include <cstdio>
+#include <algorithm>
+using namespace std;
+int main() {
+    int a[5] = {1, 2, 3, 4, 5};
+    fill(a, a+5, 23);
+    for(int i = 0; i < 5; i++) {
+        printf("%d ", a[i]);
+    }
+    return 0;
+}
+result:
+23 23 23 23 23
+```
+
 
 
 #### 6. map
