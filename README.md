@@ -39,28 +39,27 @@ g++ -W file_name.cpp -o another_name
    node[a] = {data, b, false};  // 注意时花括号，和数组初始化一样。
    ```
 
-5. ```c++
-   printf("%05d", i);  // 使不足５位的整数的高位补０。
-   printf("%5d", i);  // 使不足５位的整数的高位补为空。
-   ```
+5. 
+```c++
+printf("%05d", i);  // 使不足５位的整数的高位补０。
+printf("%5d", i);  // 使不足５位的整数的高位补为空。
+```
    
-6. ```c++
-   scanf("%d %c");
-   ```
-   
-      // `scanf()`使用`%c`可以读入`空格`，要注意格式！
+6. 
+```c++
+scanf("%d %c");
+```
+// `scanf()`使用`%c`可以读入`空格`，要注意格式！
 
 7. 使用new运算符为链表结点分配内存空间
 
-   使用方法：`typename *p = new typename;`
-
-   eg.
-
-   ```c++
-   int *p = new int;
-   node *p = new node;
-   int *p = new arr[10000];
-   ```
+使用方法：`typename *p = new typename;`
+eg.
+```c++
+int *p = new int;
+node *p = new node;
+int *p = new arr[10000];
+```
    
 8. `memset`对数组中每一个元素赋相同的值
 
@@ -69,6 +68,12 @@ g++ -W file_name.cpp -o another_name
    前提条件：添加`string.h`
 
    ==建议赋值为0或-1==，不易出错。
+9. Get array length(C)
+
+```c
+int arr[];
+int length = sizeof(arr)/sizeof(arr[0]); // 总字节数/第一个元素字节数
+```
 
    
 
@@ -652,6 +657,10 @@ result:
 - find()
 - size()
 - clear()
+
+
+
+#### 数学问题
 
 
 
