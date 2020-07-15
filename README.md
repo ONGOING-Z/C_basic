@@ -85,6 +85,7 @@ g++ -W file_name.cpp -o another_name
     （1）符号常量通常用大写字母拼写
     （2）末尾无分号
 
+11. C中常量INT_MAX和INT_MIN分别表示最大、最小整数，定义在头文件limits.h中. INT_MAX = 2^31-1，INT_MIN= -2^31
 ### 二、c++
 
 #### 1. vector
@@ -772,3 +773,26 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
+
+#### unordered_set
+
+##### 定义
+
+c++ unordered_set定义: 是一个集合，集合中的每一个元素都是唯一的，就算插入几个相同的元素，但是最后保留下的只有一个。
+
+##### 方法
+
+1. unordered_set::find()
+
+    unordered_set::find()函数是C++ STL中的内置函数，用于在容器中搜索元素。它返回元素的迭代器，如果找到其他元素，则返回指向unordered_set::end()的迭代器。
+
+    用法： unordered_set_name.find(key)
+
+    ```c++
+    if(s.find(xx) != s.end()) xxx
+    ```
+
+2. unordered_set::insert(element)
+
+    unordered_set::insert(element)
+
