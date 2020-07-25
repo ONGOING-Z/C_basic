@@ -89,6 +89,17 @@
 12. 逻辑移位
 
     逻辑移位: (1)逻辑左移 (2)逻辑右移; 移出的空位都用0来补。
+13. nullptr
+
+    其指c++ 中的空指针常量。
+
+14. c++ delete
+
+    假设ptr是一个指针，delete ptr代表释放内存，只用来释放ptr指向的内存。
+
+15. to_string()
+    
+    将数值转换为字符串。
 
 ### C++
 
@@ -668,7 +679,6 @@ result:
 - size()
 - clear()
 
-
 ### 《C和指针》
 
 #### 1th 快速上手
@@ -738,7 +748,49 @@ result:
 
 ![varialbe_and_addr](./images/variable_addr.png)
 
+Pointers - variables that store address of another variable.
+指针变量存储的是地址
+
+0. 间接访问(de-referencing)操作符
 1. 变量给了我们更方便的方法记住地址，但是硬件仍然通过地址访问内存位置。
+2. 变量的值就是分配给该变量的内存位置所存储的数值。??
+3. 指针变量可以作为左值，并不是因为它们是指针，而是因为它们是变量。对指针变量进行间接访问表示我们应该访问指针所指向的位置。
+
+![Image](img/pointer_1.png)
+
+![Image](img/pointer_2.png)
+
+
+`int *b = &a`和`b = &a`的区别是什么?
+这两个表达的应该是一样的意思。
+看第二个b，这个b代表的是指针，如果加上声明语句的话和前一个是一样的
+感觉`int * p; p = &a;`,这个更好理解。
+
+一个例子
+
+```c
+#include <stdio.h>
+int main(int argc, char *argv[])
+{
+    int a = 8;
+    int *p;
+    p = &a; // &a is address of a
+    printf("%d\n", p); // p is 2002
+    printf("%d\n", p + 1); // p+1 is 2006
+
+    return 0;
+}
+```
+
+4. a pointer to pointer(mycodeschool)
+
+    ```c
+    int *p;
+    int **q;
+    q = &p;
+    ```
+
+![Image](img/pointer_to_pointer.png)
 
 ----
 
