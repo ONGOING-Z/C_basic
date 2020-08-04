@@ -100,6 +100,7 @@
 15. to_string()
     
     将数值转换为字符串。
+
 16. for循环遍历字符串的一种新方法
 
     ```c++
@@ -119,6 +120,10 @@
         return 0;
     }
     ```
+17. c++ auto
+
+    可以自动推断变量类型
+    1. auto变量必须在定义时进行初始化，如果不进行初始化，就不能进行变量类型的推断了。
 
 ### C++
 
@@ -910,6 +915,29 @@ c++ unordered_set定义: 是一个集合，集合中的每一个元素都是唯�
     unordered_set::insert(element)
 
 #### set
+
+set中每个值都唯一，系统可以根据元素的值自动排序.
+1. set.insert()
+
+```c++
+#include <stdio.h>
+#include <set>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    set<int> set1;
+    for (int i = 0; i < 10; i++)
+    {
+        set1.insert(i);
+    }
+    set<int>::iterator it;
+    for (it = set1.begin(); it != set1.end(); it++)
+        printf("%d ", *it);
+
+    return 0;
+}
+```
 
 #### pair
 
