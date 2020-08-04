@@ -100,6 +100,25 @@
 15. to_string()
     
     将数值转换为字符串。
+16. for循环遍历字符串的一种新方法
+
+    ```c++
+    #include <stdio.h>
+    #include <vector>
+    #include <string>
+    using namespace std;
+
+    int main(void)
+    {
+        string str = "better";
+        for (char c : str)
+        {
+            printf("%c\n", c);
+        }
+
+        return 0;
+    }
+    ```
 
 ### C++
 
@@ -486,6 +505,8 @@ result:
   }
   result: 13 12 11 10 14 15
   ```
+- reverse一个vector
+    `reverse(res.begin(), res.end());`
 
 ##### （4）sort()
 
