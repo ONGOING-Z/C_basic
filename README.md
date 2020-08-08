@@ -142,6 +142,13 @@ vector<typename> name;
 
 注：其长度可以根据需要进行变化，“变长数组”
 
+1. 指定大小
+
+```c++
+// Create a vector v1 with 3 elements of default value 0
+vector<int> v1(3);
+```
+
 ##### （2）vector容器内元素的访问
 
 例子
@@ -913,6 +920,35 @@ c++ unordered_set定义: 是一个集合，集合中的每一个元素都是唯�
 2. unordered_set::insert(element)
 
     unordered_set::insert(element)
+
+#### unordered_map
+
+```c++
+#include <stdio.h>
+#include <unordered_map>
+#include <map>
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    unordered_map<int, string> myMap = {{5, "张大"}, {6, "李五"}};
+    myMap[2] = "李四";
+    myMap.insert(pair<int, string>(3, "陈二"));
+
+    auto iter = myMap.begin();
+    while (iter != myMap.end())
+    {
+        cout << iter->first << "," << iter->second << endl;
+        ++iter;
+    }
+    return 0;
+}
+```
+
+两个属性值:
+myMap.first # myMap->first是错误的写法
+myMap.second
 
 #### set
 
