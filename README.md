@@ -137,6 +137,12 @@
 
     值的访问: 两个值可以分别用pair的两个公有函数first和second访问。
 
+19. map的count和find,map和unordered_map
+
+    使用count，返回的是被查找元素的个数。如果有，返回1；否则，返回0。注意，map中不存在相同元素，所以返回值只能是1或0。
+
+    使用find，返回的是被查找元素的位置，没有则返回map.end()。
+
 ### C++
 
 #### 1. vector
