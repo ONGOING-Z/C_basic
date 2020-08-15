@@ -332,19 +332,11 @@ vector<typename> vi;
     // result: 1 2 3 5
     ```
 
-    
 
   - 删除区间所有元素 erase(first, last) **左开右闭**
 
-    
-
-  
-
-  
-
-  
-
-  
+- front(): 返回第一个元素引用
+- back(): 返回最后一个元素引用
 
 #### 2. stack
 
@@ -421,8 +413,6 @@ stack<typename> name;
       return 0;
   }
   ```
-
-  
 
 ##### （3）常用函数
 
