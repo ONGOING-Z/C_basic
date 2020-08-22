@@ -143,6 +143,15 @@
 
     使用find，返回的是被查找元素的位置，没有则返回map.end()。
 
+20. string.substr()
+
+    string.substr(start, [length])
+    ```c++
+    string s = "12345" 
+    string sub1 = s.substr(3); // sub1 = "345"
+    string sub2 =  s.substr(3, 2);  // sub2 = "34"
+    ```
+
 ### C++
 
 #### 1. vector
