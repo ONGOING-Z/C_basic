@@ -151,6 +151,9 @@
     string sub1 = s.substr(3); // sub1 = "345"
     string sub2 =  s.substr(3, 2);  // sub2 = "34"
     ```
+21. string to int: stoi()
+
+   stoi(str, start_position, 2) 2是进制，此例意为将2进制的str从position转换成10进制
 
 ### C++
 
