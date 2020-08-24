@@ -155,6 +155,9 @@
 
    stoi(str, start_position, 2) 2是进制，此例意为将2进制的str从position转换成10进制
 
+22. char to int: `c - '0'`
+23. int to char: `i + '0'`
+
 ### C++
 
 #### 1. vector
