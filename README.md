@@ -120,7 +120,7 @@
         return 0;
     }
     ```
-17. c++ auto
+17. c++ auto (since C++ 11)
 
     可以自动推断变量类型
     1. auto变量必须在定义时进行初始化，如果不进行初始化，就不能进行变量类型的推断了。
@@ -200,8 +200,9 @@
 vector<typename> name;
 ```
 
-初始化: `vector<int> abc(10);`,初始化了10个默认值为0的元素.
-初始化: `vector<int> temp = { 4, 1, 2, 1, 2 };`
+初始化1: `vector<int> abc(10);`,初始化了10个默认值为0的元素.
+初始化2: `vector<int> temp = { 4, 1, 2, 1, 2 };`
+初始化3: `vector<int> v{1, 2, 4, 5};`  // construction 
 
 注：其长度可以根据需要进行变化，“变长数组”
 
