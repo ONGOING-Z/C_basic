@@ -153,6 +153,7 @@
     ```
 21. string to int: stoi()
 
+
    stoi(str, start_position, 2) 2是进制，此例意为将2进制的str从position转换成10进制
 
 22. char to int: `c - '0'`
@@ -959,6 +960,8 @@ int main(int argc, char *argv[])
 
 c++ unordered_set定义: 是一个集合，集合中的每一个元素都是唯一的，就算插入几个相同的元素，但是最后保留下的只有一个。
 
+注意: unordered_set中数据是无序的.
+
 ##### 方法
 
 1. unordered_set::find()
@@ -974,6 +977,11 @@ c++ unordered_set定义: 是一个集合，集合中的每一个元素都是唯�
 2. unordered_set::insert(element)
 
     unordered_set::insert(element)
+
+3. set 与 unordered_set
+
+何时使用`set`
+  - 需要有序的数据!
 
 #### unordered_map
 
