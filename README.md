@@ -7,8 +7,8 @@
 0. linux下编译运行c++程序
 
     ```bash
-    g++ -W file_name.cpp -o another_name
-    ./file_name
+    g++ -W input.cpp -o output_name
+    ./output_name
     ```
 
     `-W`: 输出错误信息
@@ -710,9 +710,15 @@ result:
 23 23 23 23 23
 ```
 
+#### maltimap
+
+multimap 容器保存的是有序的键/值对，但它可以保存**重复**的元素。
 
 
 #### 6. map
+
+**注意**: 
+- map中的key是唯一的，并且不能修改，遇到重复的key就会插入失败
 
 > 翻译为映射。
 >
