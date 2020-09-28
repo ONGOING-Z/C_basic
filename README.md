@@ -193,6 +193,22 @@
 
 也就是说，一个存放声明(declaration)，一个存放定义（definition)。
 
+30. 当数组作为函数参数进行传递时，数组就会自动退化为同类型指针。
+
+```c++
+int GetSize(int data[])
+{
+   return sizeof(data);
+}
+
+int main(void)
+{
+    int data[] = {1, 3, 4, 5};
+    int size = Getsize(data); // 4
+
+}
+```
+
 ### C++
 
 #### 1. vector
