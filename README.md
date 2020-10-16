@@ -209,6 +209,43 @@ int main(void)
 }
 ```
 
+31. size_t: size_t主要用于计数，如sizeof函数返回值类型即为size_t。在不同位的机器中所占的位数也不同，size_t是无符号数。
+32. assert(): 
+  1. `#include <assert.h>`
+
+33. `const char*`是指向常量的指针，而不是指针本身为常量。通过该指针不能修改它所指向的数据。
+  `char const*`和上面这种写法等价。
+34. `char * const ptr`: 一个指向字符的指针常数, 即const指针，不能修改ptr指针，但是可以修改指针指向的内容。
+  ```c++
+   int main(int argc, char *argv[])
+   {
+      char str[] = "hello world";
+      char ss[] = "good game!";
+      char * const ptr = str;
+
+      for (int i = 0; i < 11; i++)
+         cout << ptr[i];
+      cout << endl;
+
+      ptr[0] = 's';
+      //ptr = ss; // wrong
+
+      dbg(ptr);
+      
+
+      return 0;
+   }
+  ```
+
+35. `const char *`到`char *`的转换
+
+   const char*是不能直接赋值到char*的, char*要另外开辟新的空间
+   ```c++
+   const char * str = "abcde";
+   char *res = new char[100]; 
+   strcpy(str, res);
+   ```
+
 ### C++
 
 #### 1. vector
