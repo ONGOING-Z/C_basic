@@ -246,6 +246,19 @@ int main(void)
    strcpy(str, res);
    ```
 
+36. cin遇到空格就会停止。
+37. 字符数组和string的转换
+  1. 字符数组-> string
+      ```c++
+      char ch[];
+      string s = ch;
+      ```
+  2. string -> 字符数组
+     ```c++
+     char ch[10];
+     string str("ABC");
+     strcpy(ch, str.c_str());
+     ```
 ### C++
 
 #### 1. vector
