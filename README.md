@@ -259,6 +259,8 @@ int main(void)
      string str("ABC");
      strcpy(ch, str.c_str());
      ```
+
+38. string.push_back(): 在字符串末尾添加字符
 ### C++
 
 #### 1. vector
