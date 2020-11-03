@@ -261,6 +261,15 @@ int main(void)
      ```
 
 38. string.push_back(): 在字符串末尾添加字符
+39. const: const是constant的简写，是不变的意思。但并不是说它修饰常量，而是说它限定一个变量为只读。
+40. map中元素如何排序
+  1. sort方法只能对线性容器进行排序，但是map是一个集合容器, 利用sort不能直接对map进行排序
+  2. 将map的key值和value值放在pair类型的vector中，构造比较函数cmp
+  ```c++
+  bool cmp(pair<char, int> p1, pair<char, int> p2)
+      return p1.second > p2.second;
+  ```
+
 ### C++
 
 #### 1. vector
