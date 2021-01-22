@@ -1129,3 +1129,23 @@ int main(int argc, char *argv[])
 #### begin()/end()
 
 #### map()
+
+#### 字符串的输入
+
+1. `cin`输入遇到`空格`就会结束
+
+   所以在输入一段话的时候，使用cin只会接收到第一个单词。
+
+2. string - > const char *
+
+   `.c_str()`
+
+3. 遍历字符数组
+
+4. 字符串转换成整型数`atoi(const char *ptr)`
+
+   头文件: `stdlib.h`/`cstdlib`
+
+5. 带有空格的一段话输入
+
+   使用`getline(cin, str)`输入，这个函数遇到空格会继续输入。
